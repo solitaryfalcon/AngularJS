@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+<meta charset="utf-8">
+<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+
+	<div ng-controller="myCtrl as myCtrl1">
+
+		<input ng-model="name" ng-value="name1">
+
+		<p>input 输入框的值绑定了变量 "name" :</p>
+		{{name}}<hr/>
+		<input ng-value="name" ng-model="name1">
+        
+	</div>
+
+<script>
+	var app = angular.module('myApp', []);
+	app.controller('myCtrl', function($scope) {
+	
+		$scope.name = "";
+		$scope.name1= "";
+	});
+</script>
+
+<p>该实例演示了如何使用 ng-model 指令绑定输入框的值到 scope 变量中。</p>
+
+</body>
+</html>
